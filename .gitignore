@@ -59,3 +59,7 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 .env
+package copy 2.json
+package copy.json
+src-Artist-nft
+src-fb copy
