@@ -24,7 +24,7 @@ import {
   Marker,
   AnimatedRegion,
 } from 'react-native-maps';
-import OpenAppSettings from 'react-native-app-settings';
+// import OpenAppSettings from 'react-native-app-settings';
 
 import Styles from './style';
 import CustomStyle from './mapCustomStyle';
@@ -121,7 +121,7 @@ class PickUpLocationsContainer extends Component {
           err => {
             // console.log("errrr----", err);
             alert('Fetching the Position failed, try reenabling your location');
-            OpenAppSettings.open();
+            // OpenAppSettings.open();
             this.props.navigation.goBack();
           },
         );
