@@ -18,7 +18,7 @@ import {
   Spinner,
   Thumbnail,
 } from 'native-base';
-import {DrawerActions} from 'react-navigation';
+import {DrawerActions} from '@react-navigation/native';
 import {accountOperations} from '../../account/duck';
 
 //packages

@@ -18,12 +18,12 @@ import {
   Thumbnail,
   Text,
 } from 'native-base';
-import {
-  Animated,
-  ProviderPropType,
-  Marker,
-  AnimatedRegion,
-} from 'react-native-maps';
+// import {
+//   Animated,
+//   ProviderPropType,
+//   Marker,
+//   AnimatedRegion,
+// } from 'react-native-maps';
 // import OpenAppSettings from 'react-native-app-settings';
 
 import Styles from './style';
@@ -161,61 +161,64 @@ class PickUpLocationsContainer extends Component {
           }
         />
 
-        {LATITUDE && LONGITUDE ? (
-          <Animated
-            showUserLocation
-            provider={this.props.provider}
-            style={styles.map}
-            initialRegion={{
-              latitude: LATITUDE,
-              longitude: LONGITUDE,
-              latitudeDelta: LATITUDE_DELTA,
-              longitudeDelta: LONGITUDE_DELTA,
+        {/* {LATITUDE && LONGITUDE ? (
+          // <Animated
+          //   showUserLocation
+          //   provider={this.props.provider}
+          //   style={styles.map}
+          //   initialRegion={{
+          //     latitude: LATITUDE,
+          //     longitude: LONGITUDE,
+          //     latitudeDelta: LATITUDE_DELTA,
+          //     longitudeDelta: LONGITUDE_DELTA,
+          //   }}
+          //   customMapStyle={CustomStyle}
+          //   // onPress={(e) => this.onMapPress(e)}
+          // >
+           */}
+
+        {/* {pickUpLocationsData.map(marker => (
+          <Marker
+            key={marker._id}
+            // coordinate={marker.location}
+            coordinate={{
+              longitude: marker.location.lng,
+              latitude: marker.location.lat,
             }}
-            customMapStyle={CustomStyle}
-            // onPress={(e) => this.onMapPress(e)}
-          >
-            {pickUpLocationsData.map(marker => (
-              <Marker
-                key={marker._id}
-                // coordinate={marker.location}
-                coordinate={{
-                  longitude: marker.location.lng,
-                  latitude: marker.location.lat,
-                }}
-                // image={images.appLogo}
-                // onPress={() => this.setState({
-                //     detailPopup: {
-                //         selectedLocation: marker
-                //     },
-                //     showDetails: !showDetails
-                // })}
-                onPress={() =>
-                  this.onClicMarkLocation(
-                    LATITUDE,
-                    LONGITUDE,
-                    marker.location.lat,
-                    marker.location.lng,
-                    marker,
-                  )
-                }
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 50,
-                  height: 50,
-                }}>
-                <Thumbnail
-                  circle
-                  style={{width: 50, height: 50}}
-                  source={images.appLogo}
-                />
-              </Marker>
-            ))}
-          </Animated>
-        ) : (
-          <Spinner />
-        )}
+            // image={images.appLogo}
+            // onPress={() => this.setState({
+            //     detailPopup: {
+            //         selectedLocation: marker
+            //     },
+            //     showDetails: !showDetails
+            // })}
+            onPress={() =>
+              this.onClicMarkLocation(
+                LATITUDE,
+                LONGITUDE,
+                marker.location.lat,
+                marker.location.lng,
+                marker,
+              )
+            }
+            style={{
+              justifyContent: 'center',
+              alignItems: 'center',
+              width: 50,
+              height: 50,
+            }}>
+            <Thumbnail
+              circle
+              style={{width: 50, height: 50}}
+              source={images.appLogo}
+            />
+          </Marker>
+        ))} */}
+        {/* //   </Animated> 
+        // ) : (
+          //   <Spinner />
+        // )}
+        */}
 
         {showDetails && this.state.detailPopup ? (
           <AnimatedView>

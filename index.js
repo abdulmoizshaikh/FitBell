@@ -5,12 +5,12 @@ import {AppRegistry, LogBox} from 'react-native';
 import {name as appName} from './app.json';
 import {startNetworkLogging} from 'react-native-network-logger';
 import {Variable} from './src/constants';
-import {ENV} from './src/constants/config/env';
-import Root from './src/Root';
+import Root from './Root';
 import 'react-native-gesture-handler';
 
 // Starts network logging
-if (ENV.BUILD_ENV !== Variable.PRODUCTION) {
+console.log('process.env.BUILD_ENV', process.env.BUILD_ENV);
+if (process.env.BUILD_ENV !== Variable.PRODUCTION) {
   startNetworkLogging();
 }
 

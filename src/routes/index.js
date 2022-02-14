@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   createDrawerNavigator,
   createAppContainer,
-} from 'react-navigation';
+} from '@react-navigation/native';
 import AuthRoutes from './auth.routes';
 import SideBar from '../common/components/sidebar/sidebar';
 // import {Easing, Animated} from 'react-native';

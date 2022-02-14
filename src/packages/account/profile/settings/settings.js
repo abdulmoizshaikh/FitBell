@@ -5,7 +5,7 @@ import {
   AsyncStorage,
   TouchableWithoutFeedback,
 } from 'react-native';
-import {DrawerActions} from 'react-navigation';
+import {DrawerActions} from '@react-navigation/native';
 import {
   Text,
   Container,
@@ -20,7 +20,7 @@ import {
   Icon,
   Title,
 } from 'native-base';
-import {StackActions, NavigationActions} from 'react-navigation';
+import {StackActions, NavigationActions} from '@react-navigation/native';
 
 // redux
 import {bindActionCreators} from 'redux';

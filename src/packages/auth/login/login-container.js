@@ -18,7 +18,8 @@ import {
   Label,
   Form,
 } from 'native-base';
-import {StackActions, NavigationActions} from 'react-navigation';
+// import {StackActions, NavigationActions} from '@react-navigation/native';
+import {NavigationService} from '../../../services';
 import styles from '../styles/inputFormStyle.js';
 
 // packages
@@ -132,7 +133,7 @@ class LoginContainer extends React.Component {
       this.props.navigation.dispatch(
         StackActions.reset({
           index: 0,
-          actions: [NavigationActions.navigate({routeName: 'CardsList'})],
+          actions: [NavigationService.navigate({routeName: 'CardsList'})],
         }),
       );
       // console.log(`restrictionsInUser =${restrictionsInUser} \n allergiesInUser =${allergiesInUser} \n fitnessGoalInUser=${fitnessGoalInUser}`)
